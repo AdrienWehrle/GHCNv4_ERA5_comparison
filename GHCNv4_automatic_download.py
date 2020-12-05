@@ -25,9 +25,7 @@ stations_metadata = pd.read_csv(metadata_filename, delimiter=r"\s+")
 
 # select all stations above min_latitude
 min_latitude = 66.5
-arctic_stations = stations_metadata[(stations_metadata.Lat > min_latitude) 
-                                    & valid_stations
-                                    & (stations_metadata.Station != 'nan')]
+arctic_stations = stations_metadata[stations_metadata.Lat > min_latitude]
 
 arctic_stations.reset_index(inplace=True, drop=True)
 
