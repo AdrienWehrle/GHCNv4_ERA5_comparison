@@ -4,6 +4,7 @@ Comparison between  [[https://data.giss.nasa.gov/gistemp/station_data_v4_globe/]
 * Table of Contents                               :toc_2:noexport:
 - [[#tools-description][Tools description]]
   - [[#GHCNv4_automatic_downloadpy][GHCNv4_automatic_download.py]]
+  - [[#GHCNv4_ERA5_combinationpy][GHCNv4_ERA5_combination.py]]
   
 * Tools description
 ** GHCNv4_automatic_download.py
@@ -11,3 +12,8 @@ Comparison between  [[https://data.giss.nasa.gov/gistemp/station_data_v4_globe/]
   the full list of stations ([[GHCNv4_stations.txt]]) or a subset of list of stations that contribute to the final GISTEMP v4 products ([[GHCNv4_stations_GISTEMP.txt]]).
 + Possibility to select stations within a given footprint area defined by longitude and latitude coordinates. 
 + Function is run using multiprocessing to drastically decrease computation time.
+
+** GHCNv4_ERA5_combination.py
++ Matching between GHCNv4 datasets automatically downloaded with [[GHCNv4_automatic_download.py]] and ERA5 datasets. 
++ Possibility to store results in a pickle file (.pkl) and therefore keep the initial (varying) temporal coverage of GHCNv4 datasets.
++ Option to plot a simple visualisation of temperature differences between GHCNv4 and ERA5 time series.
