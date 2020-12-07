@@ -17,3 +17,4 @@ Comparison between  [[https://data.giss.nasa.gov/gistemp/station_data_v4_globe/]
 + Matching between GHCNv4 datasets automatically downloaded with [[GHCNv4_automatic_download.py]] and ERA5 datasets. 
 + Possibility to store results in a pickle file (.pkl) and therefore keep the initial (varying) temporal coverage of GHCNv4 datasets.
 + Option to plot a simple visualisation of temperature differences between GHCNv4 and ERA5 time series.
++ Function is run using multiprocessing to drastically decrease computation time.
