@@ -209,7 +209,7 @@ if __name__ == '__main__':
             
             plt.figure()
             plt.plot(results[key].GHCNv4_temperature 
-                     - results[key].ERA5_temperature,'o-', color='darkorange')
+                     - results[key].ERA5_temperature, 'o-', color='darkorange')
             plt.ylabel('GHCNv4 minus ERA5 temperature (°C)', fontsize=18)
             plt.tick_params(axis='both', which='major', labelsize=16)
             plt.axvline(0, LineStyle='--', color='darkgray')
