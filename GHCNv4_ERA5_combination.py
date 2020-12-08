@@ -202,23 +202,23 @@ if __name__ == '__main__':
     print("--- End time: %s ---" % end_local_time)
 
 
-# plot GHCNv4 and ERA5 temperatures for all stations stored in results
-if visualisation:
-    
-    for i, key in enumerate(results):
+    # plot GHCNv4 and ERA5 temperatures for all stations stored in results
+    if visualisation:
         
-        plt.figure()
-        plt.plot(results[key].GHCNv4_temperature 
-                 - results[key].ERA5_temperature,'o-', color='darkorange')
-        plt.ylabel('GHCNv4 minus ERA5 temperature (°C)', fontsize=18)
-        plt.tick_params(axis='both', which='major', labelsize=16)
-        plt.axvline(0, LineStyle='--', color='darkgray')
-        plt.title('%s (%s)' % (station_names[i], key), fontsize=20)
-
-# save results
-if save:
+        for i, key in enumerate(results):
+            
+            plt.figure()
+            plt.plot(results[key].GHCNv4_temperature 
+                     - results[key].ERA5_temperature,'o-', color='darkorange')
+            plt.ylabel('GHCNv4 minus ERA5 temperature (°C)', fontsize=18)
+            plt.tick_params(axis='both', which='major', labelsize=16)
+            plt.axvline(0, LineStyle='--', color='darkgray')
+            plt.title('%s (%s)' % (station_names[i], key), fontsize=20)
     
-    filename = dataset_path + 'GHCNv4_ERA5_combination' + '.pkl'
-    f = open(filename, 'wb')
-    pickle.dump(results, f)
-    f.close()  
+    # save results
+    if save:
+        
+        filename = dataset_path + 'GHCNv4_ERA5_combination' + '.pkl'
+        f = open(filename, 'wb')
+        pickle.dump(results, f)
+        f.close()  
